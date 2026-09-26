@@ -4,31 +4,40 @@ public class Main {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
+        String name;
+        String adjective;
+        String animal;
+        String place;
+        String verb;
+        String food;
+        String object;
+        String secondAdjective;
+
         System.out.println("");
 
         System.out.print("Nome: ");
-        String name = scanner.nextLine();
+        name = scanner.nextLine();
 
         System.out.print("Adjetivo: ");
-        String adjective = scanner.nextLine();
+        adjective = scanner.nextLine();
 
         System.out.print("Animal: ");
-        String animal = scanner.nextLine();
+        animal = scanner.nextLine();
 
         System.out.print("Lugar: ");
-        String place = scanner.nextLine();
+        place = scanner.nextLine();
 
         System.out.print("Verbo: ");
-        String verb = scanner.nextLine();
+        verb = scanner.nextLine();
 
         System.out.print("Comida: ");
-        String food = scanner.nextLine();
+        food = scanner.nextLine();
 
         System.out.print("Objeto: ");
-        String object = scanner.nextLine();
+        object = scanner.nextLine();
 
         System.out.print("Adjetivo: ");
-        String secondAdjective = scanner.nextLine();
+        secondAdjective = scanner.nextLine();
 
         System.out.println("");
 
