@@ -41,10 +41,10 @@ public class Main {
 
         System.out.println("");
 
-        System.out.println("Certo dia, " + name + " acordou se sentindo muito " + adjective + ". Ao olhar pela janela, viu um enorme " + animal + " correndo em direção a " + place + ".\n" +
-                        "Sem pensar duas vezes, " + name + " decidiu " + verb + " atrás dele, levando apenas uma " + food + " e um " + object + ".\n" +
-                        "Quando finalmente alcançou o animal, ele disse: Você é muito " + secondAdjective + "!\n" +
-                        "E então os dois viveram uma aventura que ninguém acreditaria.");
+        System.out.println("Certo dia, " + name + " acordou se sentindo muito " + adjective + ". Ao olhar pela janela, viu um enorme " + animal + " correndo em direção a " + place + ".");
+        System.out.println("Sem pensar duas vezes, " + name + " decidiu " + verb + " atrás dele, levando apenas uma " + food + " e um " + object + ".");
+        System.out.println("Quando finalmente alcançou o animal, ele disse: Você é muito " + secondAdjective + "!");
+        System.out.println("E então os dois viveram uma aventura que ninguém acreditaria.");
 
         scanner.close();
     }
