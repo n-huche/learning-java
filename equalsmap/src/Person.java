@@ -6,7 +6,7 @@ public class Person {
         this.name = name;
     }
 
-    @Override
+    /* @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
 
@@ -27,5 +27,5 @@ public class Person {
     @Override
     public String toString() {
         return name;
-    }
+    } */
 }
