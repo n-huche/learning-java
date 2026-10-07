@@ -21,7 +21,7 @@ public class Main {
                     "3. Inverter String\n" + 
                     "4. Contar Vogais\n" +
                     "5. Verificar Palíndromo\n" +
-                    "6. Voltar\n");
+                    "6. Sair\n");
             System.out.print("Resposta: "); 
             command = scanner.nextInt();
             scanner.nextLine();
@@ -45,15 +45,17 @@ public class Main {
             // Inverter String
 
             else if (command == 3) {
-                System.out.print("\nEscreva a string que você quer inverter:  ");
+                System.out.print("\nEscreva a palavra que você quer inverter:  ");
                 String string = scanner.nextLine();
-                // System.out.println("\nSua string invertida: " + ReverseString.reverseString(string));
+                System.out.println("\nSua palavra invertida: " + ReverseString.reverseString(string));
             }
 
             // Contar Vogais
 
             else if (command == 4) {
-                
+                System.out.print("\nEscreva palavra que você quer contar as vogais:  ");
+                String string = scanner.nextLine();
+                System.out.println("\nQuantidades de vogais: " + VowelCounter.vowelCounter(string));
             }
 
             // Verificar Palíndromo

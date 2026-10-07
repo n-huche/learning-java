@@ -1,8 +1,8 @@
 public class ReverseString {
     public static String reverseString(String string) {
 
-        StringBuilder reverseString = new StringBuilder();
+        String reversed = new StringBuilder(string).reverse().toString();
         
-        return String.valueOf(string.charAt(2));
+        return reversed;
     }
 }
