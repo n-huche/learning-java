@@ -47,7 +47,7 @@ public class Main {
             else if (command == 3) {
                 System.out.print("\nEscreva a string que você quer inverter:  ");
                 String string = scanner.nextLine();
-                System.out.println("\nSua string invertida: " + ReverseString.reverseString(string));
+                // System.out.println("\nSua string invertida: " + ReverseString.reverseString(string));
             }
 
             // Contar Vogais
