@@ -61,7 +61,9 @@ public class Main {
             // Verificar Palíndromo
 
             else if (command == 5) {
-
+                System.out.print("\nEscreva palavra que você quer verificar se é um palídromo:  ");
+                String string = scanner.nextLine();
+                System.out.println("\nResultado: " + PalindromeChecker.palindromeChecker(string));
             }
 
             // Sair
