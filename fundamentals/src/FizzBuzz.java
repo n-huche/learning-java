@@ -2,8 +2,9 @@ import java.util.Arrays;
 
 public class FizzBuzz {
     public static String fizzbuzz(int until) {
-        String[] array = new String[until];
-        for (int i = 1; i < until; i++) {
+        String[] array = new String[until + 1];
+        
+        for (int i = 1; i <= until; i++) {
             if (i % 3 != 0 && i % 5 != 0) {
                 array[i] = String.valueOf(i);
             }
