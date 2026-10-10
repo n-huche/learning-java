@@ -5,6 +5,10 @@ public class Loan {
         this.isbn = isbn;
     }
 
+    public String getIsbn() {
+        return isbn;
+    }
+
     @Override 
     public String toString() {
         return isbn;

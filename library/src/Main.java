@@ -26,10 +26,12 @@ public class Main {
                     5. Devolver livro
                     6. Listar autores
                     7. Sair\n
-                Escolha:
-                """);
+                Escolha:""");
+                System.out.print(" ");
                 command = scanner.nextInt();
                 scanner.nextLine();
+                
+                System.out.println();
 
                 // Adicionar Livro
 
@@ -40,49 +42,62 @@ public class Main {
                     System.out.print("Qual é o nome do autor desse livro? ");
                     String author = scanner.nextLine();
 
-                    new Book(title, author);
+                    Library.addBook(title, author);
                 }
 
                 // Ver lista de livros
 
                 else if (command == 2) {
-                    System.out.println(Library.books);
+                    System.out.println(Library.getBooks());
                 }
 
                 // Pedir livro emprestado
 
                 else if (command == 3) {
+                    System.out.print("Insira o ISBN do livro que você quer pegar emprestado: ");
+                    String isbn = scanner.nextLine();
+                    System.out.println();
+
                     try {
-                        Library.borrow();
-                    } catch (BookNotFoundException e) {
+                        Library.borrow(isbn);
+                    } catch (Exception e) {
                         System.out.println(e.getMessage());
-                    } catch (IllegalStateException e) {
-                        System.out.println(e.getMessage());
-                    }
+                    }  
                 }
 
                 // Ver o que deve
 
                 else if (command == 4) {
-                    System.out.println("\n" + Library.firstOrDeafult(Library.loan, new Loan("Você não deve nada")));
+                    System.out.println(Library.firstOrDeafult(Library.getLoans(), new Loan("Você não deve nada")));
                 }
 
                 // Devolver livro
 
                 else if (command == 5) {
-                    System.out.println("\n" + Library.books);
-                    System.out.print("\nQue livro você quer devolver (ISBN)?");
+                    System.out.print("Insira o ISBN do livro que você quer devolver: ");
                     String isbn = scanner.nextLine();
-                    Library.books.remove(isbn);
+                    System.out.println();
+
+                    try {
+                        Library.borrow(isbn);
+                    } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                    }
                 }
 
+                // Ver authores
+
                 else if (command == 6) {
-                    System.out.println("\n" + Library.authors);
+                    System.out.println(Library.authors);
                 }
+
+                // Sair
 
                 else if (command == 7) {
                     break;
                 }
+
+                // Erro
 
                 else {
                     throw new Exception();
