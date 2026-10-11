@@ -4,11 +4,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-
         int command;
-
         boolean codition = true;
+        Library library = new Library();
+        Scanner scanner = new Scanner(System.in);
 
         // Programa
 
@@ -42,13 +41,13 @@ public class Main {
                     System.out.print("Qual é o nome do autor desse livro? ");
                     String author = scanner.nextLine();
 
-                    Library.addBook(title, author);
+                    library.addBook(title, author);
                 }
 
                 // Ver lista de livros
 
                 else if (command == 2) {
-                    System.out.println(Library.getBooks());
+                    System.out.println(library.getBooks());
                 }
 
                 // Pedir livro emprestado
@@ -59,7 +58,7 @@ public class Main {
                     System.out.println();
 
                     try {
-                        Library.borrow(isbn);
+                        library.borrow(isbn);
                     } catch (Exception e) {
                         System.out.println(e.getMessage());
                     }  
@@ -68,7 +67,7 @@ public class Main {
                 // Ver o que deve
 
                 else if (command == 4) {
-                    System.out.println(Library.firstOrDeafult(Library.getLoans(), new Loan("Você não deve nada")));
+                    System.out.println(library.firstOrDeafult(library.getLoans(), new Loan("Você não deve nada")));
                 }
 
                 // Devolver livro
@@ -79,7 +78,7 @@ public class Main {
                     System.out.println();
 
                     try {
-                        Library.borrow(isbn);
+                        library.giveBack(isbn);
                     } catch (Exception e) {
                         System.out.println(e.getMessage());
                     }
@@ -88,7 +87,7 @@ public class Main {
                 // Ver authores
 
                 else if (command == 6) {
-                    System.out.println(Library.authors);
+                    System.out.println(library.getAuthors());
                 }
 
                 // Sair
