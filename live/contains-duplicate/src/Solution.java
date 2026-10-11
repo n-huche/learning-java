@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 
 class Solution {
     public boolean containsDuplicate(int[] nums) {
