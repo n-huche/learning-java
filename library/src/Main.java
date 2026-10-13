@@ -26,7 +26,8 @@ public class Main {
                     6. Listar autores
                     7. Ver livros de um autor
                     8. Ver quantos livros tem cada autor
-                    9. Sair\n
+                    9. Ver se há emprestimos pendentes
+                    10. Sair\n
                 Escolha:""");
                 System.out.print(" ");
                 command = scanner.nextInt();
@@ -35,9 +36,8 @@ public class Main {
                 System.out.println();
 
                 // Adicionar Livro
-
                 if (command == 1) {
-                    System.out.print("\nQual é o nome do livro que você quer adicionar? ");
+                    System.out.print("Qual é o nome do livro que você quer adicionar? ");
                     String title = scanner.nextLine();
 
                     System.out.print("Qual é o nome do autor desse livro? ");
@@ -47,13 +47,11 @@ public class Main {
                 }
 
                 // Ver lista de livros
-
                 else if (command == 2) {
                     System.out.println(library.getBooks());
                 }
 
                 // Pedir livro emprestado
-
                 else if (command == 3) {
                     System.out.print("Insira o ISBN do livro que você quer pegar emprestado: ");
                     String isbn = scanner.nextLine();
@@ -67,13 +65,11 @@ public class Main {
                 }
 
                 // Ver o que deve
-
                 else if (command == 4) {
                     System.out.println(library.firstOrDeafult(library.getLoans(), new Loan("Você não deve nada")));
                 }
 
                 // Devolver livro
-
                 else if (command == 5) {
                     System.out.print("Insira o ISBN do livro que você quer devolver: ");
                     String isbn = scanner.nextLine();
@@ -87,7 +83,6 @@ public class Main {
                 }
 
                 // Ver authores
-
                 else if (command == 6) {
                     System.out.println(library.getAuthors());
                 }
@@ -105,14 +100,16 @@ public class Main {
                 }
 
                 // Quantos livros por author
-
                 else if (command == 8) {
                     System.out.println(library.booksPerAuthor());
                 }
 
-                // Sair
-
                 else if (command == 9) {
+                    System.out.println(library.loanVerification());
+                }
+
+                // Sair
+                else if (command == 10) {
                     break;
                 }
 

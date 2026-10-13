@@ -55,7 +55,6 @@ public class Library {
         }
 
     // Ver quantidade de livros por author
-
     public Map<String, Long> booksPerAuthor() {
         return books.values().stream()
                     .collect(Collectors.groupingBy(
@@ -70,19 +69,6 @@ public class Library {
 
     // Lista de emprestimos
     List<Loan> loans = new ArrayList<>();
-    
-    // Ver emprestimos feitos
-    public List<Loan> getLoans() {
-        return loans;
-    }
-
-    // Ver último emprestimo feito
-    public <T> T firstOrDeafult(List<T> list, T fallback) {
-        if (list.isEmpty()) {
-            return fallback;
-        }
-        return list.get(0);
-    }
 
     // Pedir livro emprestado
     public void borrow(String isbn) {
@@ -105,11 +91,35 @@ public class Library {
             throw new BookNotFoundException("Esse ISBN é inválido.");
         }
         Loan returnedLoan = loans.stream()
-            .filter(loan -> loan.getIsbn().equals(isbn))
-            .findFirst()
-            .orElseThrow(() -> new ItWasntBorrowedException("Esse emprestimo não foi feito."));
+                                .filter(loan -> loan.getIsbn().equals(isbn))
+                                .findFirst()
+                                .orElseThrow(() -> new ItWasntBorrowedException("Esse emprestimo não foi feito."));
 
         loans.remove(returnedLoan);
+    }
+    
+    // Ver emprestimos feitos
+    public List<Loan> getLoans() {
+        return loans;
+    }
+
+    // Ver último emprestimo feito
+    public <T> T firstOrDeafult(List<T> list, T fallback) {
+        if (list.isEmpty()) {
+            return fallback;
+        }
+        return list.get(0);
+    }
+
+    // Ver se existe algum livro emprestado
+    public boolean loanVerification() {
+        Set<String> loanToString = loans.stream()
+                                        .map(Loan::getIsbn)
+                                        .collect(Collectors.toSet());
+                                        
+        return books.values().stream()
+                    .map(Book::getIsbn)
+                    .anyMatch(book -> loanToString.contains(book));
     }
 
             /////////////////
