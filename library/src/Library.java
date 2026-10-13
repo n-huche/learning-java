@@ -2,6 +2,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.List;
 import java.util.Collections;
+import java.util.stream.Collectors;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.ArrayList;
@@ -41,12 +42,26 @@ public class Library {
     }
 
     // Ver livros de um autor
-    public String getAuthorsBooks(String author) {
+    public List<String> getAuthorsBooks(String author) {
         authorValidation(author)
             .orElseThrow(
-                () -> new NonExistentAuthorException(author)
+                () -> new NonExistentAuthorException("Autor não encontrado.")
             );
-        return author;
+        return books.entrySet().stream()
+                    .filter(book -> book.getValue().getAuthor().equals(author))
+                    .map(book -> book.getValue().getTitle().toUpperCase())
+                    .sorted()
+                    .collect(Collectors.toList());
+        }
+
+    // Ver quantidade de livros por author
+
+    public Map<String, Long> booksPerAuthor() {
+        return books.values().stream()
+                    .collect(Collectors.groupingBy(
+                        Book::getAuthor, 
+                        Collectors.counting()
+                    ));
     }
     
             ///////////////////

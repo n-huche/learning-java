@@ -21,10 +21,12 @@ public class Main {
                     1. Adicionar livro
                     2. Ver lista de livros
                     3. Pedir livro emprestado
-                    4. Ver o que deve
+                    4. Ver se deve
                     5. Devolver livro
                     6. Listar autores
-                    7. Sair\n
+                    7. Ver livros de um autor
+                    8. Ver quantos livros tem cada autor
+                    9. Sair\n
                 Escolha:""");
                 System.out.print(" ");
                 command = scanner.nextInt();
@@ -90,9 +92,27 @@ public class Main {
                     System.out.println(library.getAuthors());
                 }
 
+                else if (command == 7) {
+                    System.out.print("Você quer procurar os livros de que autor? ");
+                    String author = scanner.nextLine();
+                    System.out.println();
+
+                    try {
+                        System.out.println(library.getAuthorsBooks(author));
+                    } catch (Exception e) {
+                        System.out.print(e.getMessage());
+                    }
+                }
+
+                // Quantos livros por author
+
+                else if (command == 8) {
+                    System.out.println(library.booksPerAuthor());
+                }
+
                 // Sair
 
-                else if (command == 7) {
+                else if (command == 9) {
                     break;
                 }
 
