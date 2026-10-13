@@ -72,7 +72,7 @@ public class Library {
 
     // Pedir livro emprestado
     public void borrow(String isbn) {
-        isbnValidation(isbn)
+        findByIsbn(isbn)
             .orElseThrow(
                 () -> new BookNotFoundException("Esse ISBN é invalido.")
             );
@@ -134,7 +134,7 @@ public class Library {
     }
 
     // Verificar se ISBN existe
-    private Optional<Book> isbnValidation(String isbn) {
+    private Optional<Book> findByIsbn(String isbn) {
         return Optional.ofNullable(books.get(isbn));
     }
 
