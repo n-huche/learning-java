@@ -1,3 +1,5 @@
+package com.nhuche;
+
 import java.util.UUID;
 
 public class Book {

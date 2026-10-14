@@ -1,3 +1,5 @@
+package com.nhuche;
+
 public class Loan {
     private String isbn;
     
