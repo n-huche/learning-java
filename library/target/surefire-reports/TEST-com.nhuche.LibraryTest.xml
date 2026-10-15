@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.nhuche.LibraryTest" time="0.063" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.nhuche.LibraryTest" time="0.071" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -11,7 +11,7 @@
     <property name="java.vm.specification.version" value="21"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-21-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/workspace/projects/learning-java/library/target/surefire/surefirebooter-20261015161532873_3.jar /workspace/projects/learning-java/library/target/surefire 2026-10-15T16-15-32_795-jvmRun1 surefire-20261015161532873_1tmp surefire_0-20261015161532873_2tmp"/>
+    <property name="sun.java.command" value="/workspace/projects/learning-java/library/target/surefire/surefirebooter-20261015163252988_3.jar /workspace/projects/learning-java/library/target/surefire 2026-10-15T16-32-52_921-jvmRun1 surefire-20261015163252988_1tmp surefire_0-20261015163252988_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/workspace/projects/learning-java/library/target/test-classes:/workspace/projects/learning-java/library/target/classes:/home/box/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.1/junit-jupiter-5.9.1.jar:/home/box/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.1/junit-jupiter-api-5.9.1.jar:/home/box/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/box/.m2/repository/org/junit/platform/junit-platform-commons/1.9.1/junit-platform-commons-1.9.1.jar:/home/box/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/box/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.1/junit-jupiter-params-5.9.1.jar:/home/box/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.1/junit-jupiter-engine-5.9.1.jar:/home/box/.m2/repository/org/junit/platform/junit-platform-engine/1.9.1/junit-platform-engine-1.9.1.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -26,7 +26,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/workspace/projects/learning-java/library/target/surefire/surefirebooter-20261015161532873_3.jar"/>
+    <property name="surefire.real.class.path" value="/workspace/projects/learning-java/library/target/surefire/surefirebooter-20261015163252988_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.12.1+1-1-deb13u1-Debian"/>
     <property name="user.name" value="box"/>
@@ -52,10 +52,10 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="borrowThrowsAlreadyBorrowedException" classname="com.nhuche.LibraryTest" time="0.034"/>
-  <testcase name="giveBackThrowsBookNotFoundException" classname="com.nhuche.LibraryTest" time="0.002"/>
-  <testcase name="giveBackReturnsAvailableLoan" classname="com.nhuche.LibraryTest" time="0.003"/>
-  <testcase name="giveBackThrowsItWasntBorrowedException" classname="com.nhuche.LibraryTest" time="0.001"/>
+  <testcase name="borrowThrowsAlreadyBorrowedException" classname="com.nhuche.LibraryTest" time="0.04"/>
+  <testcase name="giveBackThrowsBookNotFoundException" classname="com.nhuche.LibraryTest" time="0.001"/>
+  <testcase name="giveBackReturnsAvailableLoan" classname="com.nhuche.LibraryTest" time="0.002"/>
+  <testcase name="giveBackThrowsItWasntBorrowedException" classname="com.nhuche.LibraryTest" time="0.002"/>
   <testcase name="borrowThrowsBookNotFoundException" classname="com.nhuche.LibraryTest" time="0.001"/>
   <testcase name="borrowRegistersLoanForAvailableBook" classname="com.nhuche.LibraryTest" time="0.002"/>
 </testsuite>
